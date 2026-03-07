@@ -1,0 +1,10 @@
+{
+  "note": "Placeholder for future context comparison data (No Paper / Method Section / Full Paper)",
+  "contexts": ["no_paper", "method_section", "full_paper"],
+  "leaderboard": {
+    "no_paper": [],
+    "method_section": [],
+    "full_paper": []
+  }
+}
+

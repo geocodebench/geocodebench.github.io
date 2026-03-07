@@ -1,0 +1,65 @@
+{
+    "case_studies": [
+      {
+        "id": "case_1",
+        "title": "Consistent Failure Across LLMs on Simple Functions",
+        "function": "forward.event",
+        "key_finding": "Even state-of-the-art models fail on brief, specialized functions due to improper formula usage or fictional code generation[cite: 208, 276].",
+        "technical_details": {
+          "objective": "Approximate event accumulation using logarithmic intensity difference from two frames[cite: 275].",
+          "model_errors": {
+            "GPT-5": "Applied an improper formula for event change calculation[cite: 258].",
+            "Gemini-2.5-Pro": "Generated an invalid input signature[cite: 262].",
+            "Llama-3.1-405B": "Produced a completely fictional function 'render_rays'[cite: 273]."
+          },
+          "source_paper": "[23] InceventGS [cite: 208, 647]"
+        }
+      },
+      {
+        "id": "case_2",
+        "title": "Creative Correctness in 3D Geometry",
+        "function": "compute_epipolar_distance",
+        "key_finding": "LLMs can achieve success through mathematically equivalent but distinctly different implementation paths[cite: 211, 219].",
+        "technical_details": {
+          "GPT-5_approach": "Used the Fundamental Matrix (F) operating directly on pixel coordinates[cite: 318].",
+          "DeepSeek-R1_approach": "Transformed inputs to normalized coordinates and applied the Essential Matrix (E)[cite: 319].",
+          "result": "Both achieved 10/10 unit test pass rates despite different logic[cite: 315, 317]."
+        }
+      },
+      {
+        "id": "case_3",
+        "title": "Textbook Definition Defaulting vs. Specific Semantics",
+        "function": "distance_to_gaussian_surface",
+        "key_finding": "Models struggle with task-specific implicit semantics, defaulting instead to common textbook definitions[cite: 534, 535].",
+        "technical_details": {
+          "required_logic": "Return physical distance (surface radius) from the Gaussian center to the 1-sigma ellipsoidal surface[cite: 487, 489].",
+          "llm_error": "Computed the dimensionless Mahalanobis radius, which is internally consistent but semantically incorrect for this pipeline[cite: 491, 532].",
+          "source_paper": "[47] Dof-Gaussian [cite: 486, 707]"
+        }
+      },
+      {
+        "id": "case_4",
+        "title": "Loss of Engineering Semantics in Vertex Normal Computation",
+        "function": "_compute_vertex_normals",
+        "key_finding": "LLMs master core routines but often fail to implement crucial engineering robustness and boundary conditions[cite: 591, 596].",
+        "technical_details": {
+          "missing_semantics": [
+            "Area-weighted smoothing: Models normalized face normals too early, discarding area information[cite: 585, 591].",
+            "Degeneracy handling: Models failed to inject default directions for zero-norm accumulated normals[cite: 587, 591]."
+          ],
+          "source_paper": "[18] TetSphere Splatting [cite: 575, 635]"
+        }
+      },
+      {
+        "id": "case_5",
+        "title": "Context Length Impact on MGadapter Fidelity",
+        "function": "bary2gs",
+        "key_finding": "Concise, method-focused context yields better algorithmic fidelity than full-paper context which introduces noise[cite: 51, 355, 358].",
+        "technical_details": {
+          "full_paper_performance": "Correctly implemented thin anisotropic surfels aligned with local mesh geometry[cite: 555, 556].",
+          "reduced_context_drift": "Reverted to generic 3DGS heuristics with isotropic scales and non-zero thickness[cite: 557, 558].",
+          "source_paper": "[67] GeoSplatting [cite: 552, 753]"
+        }
+      }
+    ]
+  }

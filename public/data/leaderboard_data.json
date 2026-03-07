@@ -1,0 +1,86 @@
+{
+    "benchmark_name": "GeoCodeBench",
+    "metric": "Pass Rate (%)",
+    "leaderboard": [
+      {
+        "model": "GPT-5",
+        "company": "OpenAI",
+        "type": "closed-source",
+        "overall": 28.0,
+        "geo_trans": 35.1,
+        "mech_opt": 34.0,
+        "algorithm": 21.7,
+        "routing": 17.2
+      },
+      {
+        "model": "Gemini-2.5-Pro",
+        "company": "Google",
+        "type": "closed-source",
+        "overall": 27.4,
+        "geo_trans": 44.0,
+        "mech_opt": 25.2,
+        "algorithm": 17.2,
+        "routing": 36.7
+      },
+      {
+        "model": "Claude-Sonnet-4.5",
+        "company": "Anthropic",
+        "type": "closed-source",
+        "overall": 27.2,
+        "geo_trans": 41.9,
+        "mech_opt": 28.5,
+        "algorithm": 20.0,
+        "routing": 25.4
+      },
+      {
+        "model": "Kimi-K2-Instruct",
+        "company": "MoonshotAI",
+        "type": "open-source",
+        "overall": 26.3,
+        "geo_trans": 38.8,
+        "mech_opt": 21.2,
+        "algorithm": 17.2,
+        "routing": 21.7
+      },
+      {
+        "model": "Qwen3-Coder-480B",
+        "company": "Alibaba",
+        "type": "open-source",
+        "overall": 23.2,
+        "geo_trans": 31.2,
+        "mech_opt": 17.5,
+        "algorithm": 26.6,
+        "routing": 16.7
+      },
+      {
+        "model": "Doubao-Seed-1.6",
+        "company": "ByteDance",
+        "type": "closed-source",
+        "overall": 22.6,
+        "geo_trans": 41.1,
+        "mech_opt": 16.0,
+        "algorithm": 19.3,
+        "routing": 20.0
+      },
+      {
+        "model": "DeepSeek-R1",
+        "company": "DeepSeek",
+        "type": "open-source",
+        "overall": 17.1,
+        "geo_trans": 36.7,
+        "mech_opt": 15.6,
+        "algorithm": 8.7,
+        "routing": 4.9
+      },
+      {
+        "model": "Llama-3.1-405B-Instruct",
+        "company": "Meta",
+        "type": "open-source",
+        "overall": 14.5,
+        "geo_trans": 25.7,
+        "mech_opt": 12.4,
+        "algorithm": 5.0,
+        "routing": 36.7
+      }
+    ]
+  }
