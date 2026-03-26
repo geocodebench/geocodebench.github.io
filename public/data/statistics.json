@@ -1,23 +1,23 @@
 {
-  "total_tasks": 85,
+  "total_tasks": 100,
   "total_models": 8,
   "avg_paper_tokens": 20232,
   "sources": [
-    {"venue": "CVPR'25", "count": 43},
-    {"venue": "ICCV'25", "count": 29},
-    {"venue": "ICLR'25", "count": 13}
+    {"venue": "CVPR'25", "count": 28},
+    {"venue": "ICCV'25", "count": 15},
+    {"venue": "ICLR'25", "count": 4}
   ],
   "task_distribution": [
-    {"category": "Mechanics/Optics", "percentage": 40},
-    {"category": "Novel Algorithm", "percentage": 32},
-    {"category": "Geometric Transformations", "percentage": 21},
-    {"category": "Geometric Logic Routing", "percentage": 7}
+    {"category": "Mechanics/Optics", "percentage": 31},
+    {"category": "Novel Algorithm", "percentage": 34},
+    {"category": "Geometric Transformations", "percentage": 24},
+    {"category": "Geometric Logic Routing", "percentage": 11}
   ],
   "key_findings": [
-    "GPT-5 leads with 28.0% pass rate",
-    "Method section context outperforms full paper input",
-    "All models struggle with geometric logic routing (avg 17.2%)",
-    "Open-source models closing the gap with closed-source"
+    "GPT-5 leads with 36.6% pass rate",
+    "LLMs can achieve Creative Correctness in 3D geometry tasks",
+    "LLMs show stronger general 3D understanding than research capability",
+    "Method section context outperforms Full Paper input"
   ]
 }
 

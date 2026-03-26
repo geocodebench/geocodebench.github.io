@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import LeaderboardTable from '../components/LeaderboardTable';
+import LeaderboardBarChart from '../components/LeaderboardBarChart';
 import RadarChart from '../components/RadarChart';
 
 const Leaderboard = () => {
@@ -87,25 +87,21 @@ const Leaderboard = () => {
               <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
             </svg>
           </div>
-          <div className="ml-3">
-            <p className="text-sm text-yellow-700">
-              Context comparison (No Paper / Method Section / Full Paper) coming soon. 
-              Currently showing default context results.
-            </p>
-          </div>
         </div>
       </div>
 
-      {/* Leaderboard Table */}
+      {/* Leaderboard Bar Chart */}
       <div className="bg-white rounded-lg shadow-md mb-8">
         <div className="p-6">
-          <h2 className="text-xl font-semibold mb-4">Rankings</h2>
+          <h2 className="text-xl font-semibold mb-1">Rankings</h2>
           <p className="text-sm text-gray-600 mb-4">
-            Click on model rows to select for radar chart comparison (max 5 models)
+            {dimensions.find((d) => d.key === selectedDimension)?.label} · Click a bar to add/remove model for radar comparison (max 5)
           </p>
-          <div className="cursor-pointer">
-            <LeaderboardTable data={data.leaderboard} dimension={selectedDimension} />
-          </div>
+          <LeaderboardBarChart
+            data={data.leaderboard}
+            dimension={selectedDimension}
+            onModelClick={handleModelSelect}
+          />
         </div>
       </div>
 

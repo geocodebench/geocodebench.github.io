@@ -116,18 +116,26 @@ const Download = () => {
         <div className="bg-white rounded-lg shadow-md p-6">
           <h2 className="text-2xl font-semibold mb-4">Data Sources</h2>
           <div className="space-y-4">
-            {stats.sources.map((source) => (
-              <div key={source.venue} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                <div>
-                  <div className="font-semibold text-lg text-gray-900">{source.venue}</div>
-                  <div className="text-sm text-gray-600">Top-tier Computer Vision Conference</div>
-                </div>
-                <div className="text-3xl font-bold text-primary">{source.count}</div>
-              </div>
-            ))}
+            {(() => {
+              const totalFromSources = stats.sources.reduce((sum, s) => sum + (Number(s.count) || 0), 0);
+              const total = totalFromSources || Number(stats.total_tasks) || 1;
+
+              return stats.sources.map((source) => {
+                const pct = (Number(source.count) || 0) / total * 100;
+                return (
+                  <div key={source.venue} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <div>
+                      <div className="font-semibold text-lg text-gray-900">{source.venue}</div>
+                      <div className="text-sm text-gray-600">{pct.toFixed(1)}%</div>
+                    </div>
+                    <div className="text-3xl font-bold text-primary">{pct.toFixed(1)}%</div>
+                  </div>
+                );
+              });
+            })()}
             <div className="mt-6 p-4 bg-blue-50 rounded-lg">
               <p className="text-sm text-gray-700">
-                <span className="font-semibold">Total:</span> {stats.sources.reduce((sum, s) => sum + s.count, 0)} tasks 
+                <span className="font-semibold">Total:</span> {stats.sources.reduce((sum, s) => sum + (Number(s.count) || 0), 0)} tasks 
                 extracted from 33 official code repositories
               </p>
             </div>
