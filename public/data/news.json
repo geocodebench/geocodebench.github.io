@@ -1,10 +1,10 @@
 {
   "items": [
     {
-      "date": "2026-03-26",
+      "date": "2026-03-31",
       "title": "GeoCodeBench benchmark released",
       "tag": "Release",
-      "body": "We are excited to announce the release of GeoCodeBench, along with an online leaderboard and dataset downloads.",
+      "body": "We are excited to announce the release of GeoCodeBench, along with an online leaderboard.",
       "link": "/download"
     },
     {
