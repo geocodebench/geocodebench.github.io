@@ -1,198 +1,107 @@
-import { useEffect, useState } from 'react';
-import CaseCard from '../components/CaseCard';
+import RichText from '../components/RichText';
+
+import FigCase1 from '../assets/cases/FigCase1.png';
+import FigCase2 from '../assets/cases/FigCase2.png';
+import FigCase3 from '../assets/cases/FigCase3.png';
 
 const CaseStudies = () => {
-  const [cases, setCases] = useState(null);
-
-  useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/case_study_data.json`)
-      .then(res => res.json())
-      .then(data => setCases(data))
-      .catch(err => console.error('Error loading cases:', err));
-  }, []);
-
-  // Placeholder cases for expansion
-  const placeholderCases = [
+  const caseSections = [
     {
-      id: 'case_6',
-      title: 'Additional Case Study 6',
-      function: 'placeholder_function_6',
-      key_finding: 'Placeholder for future case study. Replace with actual data.',
-      technical_details: {
-        objective: 'To be added',
-      },
+      id: 'case_1',
+      eyebrow: 'Common Failures',
+      title: 'Consistent Failure Across LLMs on a Simple Function',
+      figure: FigCase1,
+      figureAlt: 'Case study figure: consistent failure across LLMs',
+      description: String.raw`\textbf{Case Study: Consistent Failure Across LLMs on a Simple Function.}
+    The function {forward\_event} approximates “event accumulation” using the logarithmic intensity difference derived from two event-camera frames. Despite its brevity and simplicity, all tested LLMs failed.`,
     },
     {
-      id: 'case_7',
-      title: 'Additional Case Study 7',
-      function: 'placeholder_function_7',
-      key_finding: 'Placeholder for future case study. Replace with actual data.',
-      technical_details: {
-        objective: 'To be added',
-      },
+      id: 'case_2',
+      eyebrow: 'Creative Correctness',
+      title: 'Creative Correctness',
+      figure: FigCase2,
+      figureAlt: 'Case study figure: creative correctness in epipolar distance',
+      description: String.raw`\textbf{Case Study: Creativity Correctness.} The function {compute\_epipolar\_distance} requires calculating the symmetric epipolar distance between corresponding image points $\mathbf{p}_1$ and $\mathbf{p}_2$ given $T_{21}$ and $\mathbf{K}$.
+    GPT-5 uses the Fundamental Matrix ($\mathbf{F}$) method ($\mathbf{l}_2 = \mathbf{F}\mathbf{p}_1$), operating directly on pixel coordinates.
+    DeepSeek-R1, conversely, first transforms the inputs to normalized coordinates ($\mathbf{x}_1, \mathbf{x}_2$) and then applies the Essential Matrix ($\mathbf{E}$) method ($\mathbf{l}'_2 = \mathbf{E}\mathbf{x}_1$).
+    Both approaches are mathematically equivalent ($\mathbf{F} = \mathbf{K}^{-T} \mathbf{E} \mathbf{K}^{-1}$) and yield the correct final distance, thus demonstrating \textbf{Creative Correctness}: models select distinct, valid pathways to achieve the required $3\text{D}$ geometry constraint.`,
     },
     {
-      id: 'case_8',
-      title: 'Additional Case Study 8',
-      function: 'placeholder_function_8',
-      key_finding: 'Placeholder for future case study. Replace with actual data.',
-      technical_details: {
-        objective: 'To be added',
-      },
-    },
-    {
-      id: 'case_9',
-      title: 'Additional Case Study 9',
-      function: 'placeholder_function_9',
-      key_finding: 'Placeholder for future case study. Replace with actual data.',
-      technical_details: {
-        objective: 'To be added',
-      },
-    },
-    {
-      id: 'case_10',
-      title: 'Additional Case Study 10',
-      function: 'placeholder_function_10',
-      key_finding: 'Placeholder for future case study. Replace with actual data.',
-      technical_details: {
-        objective: 'To be added',
-      },
+      id: 'case_3',
+      eyebrow: 'Research Capability',
+      title: 'Divergence between General and Research Capability',
+      figure: FigCase3,
+      figureAlt: 'Case study figure: divergence between general and research capability',
+      description: String.raw`\textbf{Case Study: Divergence between General and Research Capability.} 
+        Left: DeepSeek-R1 correctly solves the basic geometric problem of mapping 2D image coordinates to 3D spherical coordinates using trigonometric functions, demonstrating strong foundational knowledge. 
+        Right: In contrast, the model fails to correctly implement the paper-specific function {cross\_warp\_with\_pose\_depth\_candidates}. The error involves misinterpreting the required mutual projection logic (Yin $\leftrightarrow$ Yang) as separate projections, highlighting the difficulty LLMs face in procedural reasoning and fine-grained algorithmic synthesis based on paper content.`,
     },
   ];
 
-  if (!cases) {
-    return (
-      <div className="flex justify-center items-center min-h-screen">
-        <div className="text-xl text-gray-600">Loading...</div>
-      </div>
-    );
-  }
-
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Case Studies</h1>
-        <p className="text-lg text-gray-600">
-          In-depth analysis of model behaviors, creative solutions, and common failure patterns
-        </p>
-      </div>
+    <div className="relative">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[28rem] bg-[radial-gradient(ellipse_at_top,rgba(59,130,246,0.16),transparent_55%),radial-gradient(ellipse_at_top_right,rgba(16,185,129,0.12),transparent_50%)]" />
 
-      {/* Category Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-        <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6">
-          <div className="text-3xl mb-2">✅</div>
-          <h3 className="text-lg font-semibold mb-2">Creative Correctness</h3>
-          <p className="text-sm text-gray-700">
-            Models achieving success through different but mathematically equivalent approaches
-          </p>
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
+        <div className="mb-10">
+          <h1 className="mt-4 text-4xl font-bold tracking-tight text-gray-900">
+            Case Studies
+          </h1>
+          {/* <p className="mt-3 max-w-2xl text-lg leading-8 text-gray-600">
+            Case studies of where LLMs fail.
+          </p> */}
         </div>
-        <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-6">
-          <div className="text-3xl mb-2">❌</div>
-          <h3 className="text-lg font-semibold mb-2">Common Failures</h3>
-          <p className="text-sm text-gray-700">
-            Systematic errors even top models make on seemingly simple tasks
-          </p>
-        </div>
-        <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg p-6">
-          <div className="text-3xl mb-2">⚠️</div>
-          <h3 className="text-lg font-semibold mb-2">Semantic Gaps</h3>
-          <p className="text-sm text-gray-700">
-            Missing domain-specific knowledge and engineering robustness
-          </p>
-        </div>
-      </div>
 
-      {/* Main Case Studies */}
-      <div className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Featured Case Studies</h2>
-        <div className="space-y-6">
-          {cases.case_studies.map((caseData, index) => (
-            <CaseCard key={caseData.id} caseData={caseData} index={index} />
-          ))}
-        </div>
-      </div>
+        <div className="space-y-10">
+          {caseSections.map((cs, idx) => {
+            const imageFirst = idx % 2 === 0;
+            return (
+              <section
+                key={cs.id}
+                className="rounded-2xl border border-gray-200 bg-white/80 shadow-sm backdrop-blur"
+              >
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
+                  <div
+                    className={[
+                      'lg:col-span-7 p-5 sm:p-7',
+                      imageFirst ? 'order-1' : 'order-2 lg:order-1',
+                    ].join(' ')}
+                  >
+                    <div className="relative overflow-hidden rounded-xl border border-gray-200 bg-gray-50">
+                      <img
+                        src={cs.figure}
+                        alt={cs.figureAlt}
+                        className="h-auto w-full object-contain"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
 
-      {/* Placeholder Cases */}
-      <div className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Additional Case Studies</h2>
-        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
-          <div className="flex">
-            <div className="flex-shrink-0">
-              <svg className="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-              </svg>
-            </div>
-            <div className="ml-3">
-              <p className="text-sm text-yellow-700">
-                The following case studies are placeholders. Replace with actual case data by editing 
-                <code className="mx-1 bg-yellow-100 px-1 rounded">case_study_data.json</code>
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {placeholderCases.map((caseData, index) => (
-            <div key={caseData.id} className="bg-gray-50 rounded-lg p-6 border-2 border-dashed border-gray-300">
-              <div className="flex items-center space-x-3 mb-3">
-                <div className="text-2xl font-bold text-gray-400">#{cases.case_studies.length + index + 1}</div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-600">{caseData.title}</h3>
-                  <code className="text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded">
-                    {caseData.function}
-                  </code>
+                  <div
+                    className={[
+                      'lg:col-span-5 p-5 sm:p-7',
+                      imageFirst ? 'order-2' : 'order-1 lg:order-2',
+                    ].join(' ')}
+                  >
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <div className="text-xs font-semibold uppercase tracking-wider text-blue-700">
+                          {cs.eyebrow}
+                        </div>
+                        <h2 className="mt-2 text-xl font-semibold text-gray-900">
+                          {cs.title}
+                        </h2>
+                      </div>
+                    </div>
+
+                    <div className="mt-4">
+                      <RichText text={cs.description} className="space-y-3" />
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <p className="text-sm text-gray-500 italic">{caseData.key_finding}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Insights Summary */}
-      <div className="bg-white rounded-lg shadow-md p-8">
-        <h2 className="text-2xl font-semibold mb-6">Key Insights from Case Studies</h2>
-        <div className="space-y-4">
-          <div className="flex items-start space-x-3">
-            <span className="text-xl">🎯</span>
-            <div>
-              <h4 className="font-semibold mb-1">Multiple Valid Solutions</h4>
-              <p className="text-sm text-gray-600">
-                Models can achieve correctness through different mathematical formulations, 
-                demonstrating flexibility in problem-solving approaches.
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start space-x-3">
-            <span className="text-xl">⚠️</span>
-            <div>
-              <h4 className="font-semibold mb-1">Textbook vs. Domain-Specific Knowledge</h4>
-              <p className="text-sm text-gray-600">
-                Models often default to common textbook definitions rather than understanding 
-                task-specific implicit semantics.
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start space-x-3">
-            <span className="text-xl">🔧</span>
-            <div>
-              <h4 className="font-semibold mb-1">Engineering Robustness Gap</h4>
-              <p className="text-sm text-gray-600">
-                While models master core algorithms, they frequently miss crucial boundary conditions 
-                and robustness considerations.
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start space-x-3">
-            <span className="text-xl">📄</span>
-            <div>
-              <h4 className="font-semibold mb-1">Context Quality Matters</h4>
-              <p className="text-sm text-gray-600">
-                Concise, method-focused context often yields better results than comprehensive 
-                but noisy full-paper context.
-              </p>
-            </div>
-          </div>
+              </section>
+            );
+          })}
         </div>
       </div>
     </div>

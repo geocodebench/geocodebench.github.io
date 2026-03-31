@@ -1,0 +1,18 @@
+1.
+\textbf{Case Study: Consistent Failure Across LLMs on a Simple Function.}
+    The function \texttt{forward\_event} approximates “event accumulation” using the logarithmic intensity difference derived from two event-camera frames. Despite its brevity and simplicity, all tested LLMs failed.
+
+
+
+2.
+\textbf{Case Study: Creativity Correctness.} The function \texttt{compute\_epipolar\_distance} requires calculating the symmetric epipolar distance between corresponding image points $\mathbf{p}_1$ and $\mathbf{p}_2$ given $T_{21}$ and $\mathbf{K}$.
+    GPT-5 uses the Fundamental Matrix ($\mathbf{F}$) method ($\mathbf{l}_2 = \mathbf{F}\mathbf{p}_1$), operating directly on pixel coordinates.
+    DeepSeek-R1, conversely, first transforms the inputs to normalized coordinates ($\mathbf{x}_1, \mathbf{x}_2$) and then applies the Essential Matrix ($\mathbf{E}$) method ($\mathbf{l}'_2 = \mathbf{E}\mathbf{x}_1$).
+    Both approaches are mathematically equivalent ($\mathbf{F} = \mathbf{K}^{-T} \mathbf{E} \mathbf{K}^{-1}$) and yield the correct final distance, thus demonstrating \textbf{Creative Correctness}: models select distinct, valid pathways to achieve the required $3\text{D}$ geometry constraint.
+    }
+
+
+3.
+ \textbf{Case Study: Divergence between General and Research Capability.} 
+        Left: DeepSeek-R1 correctly solves the basic geometric problem of mapping 2D image coordinates to 3D spherical coordinates using trigonometric functions, demonstrating strong foundational knowledge. 
+        Right: In contrast, the model fails to correctly implement the paper-specific function \texttt{cross\_warp\_with\_pose\_depth\_candidates}. The error involves misinterpreting the required mutual projection logic (Yin $\leftrightarrow$ Yang) as separate projections, highlighting the difficulty LLMs face in procedural reasoning and fine-grained algorithmic synthesis based on paper content.

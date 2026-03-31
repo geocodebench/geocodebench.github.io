@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import Leaderboard from './pages/Leaderboard';
 import Analysis from './pages/Analysis';
 import CaseStudies from './pages/CaseStudies';
-import Download from './pages/Download';
+import Data from './pages/Data';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
             <Route path="/leaderboard" element={<Leaderboard />} />
             <Route path="/analysis" element={<Analysis />} />
             <Route path="/cases" element={<CaseStudies />} />
-            <Route path="/download" element={<Download />} />
+            <Route path="/data" element={<Data />} />
           </Routes>
         </main>
         <Footer />

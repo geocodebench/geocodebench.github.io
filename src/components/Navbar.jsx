@@ -10,7 +10,7 @@ const Navbar = () => {
     { path: '/leaderboard', label: 'Leaderboard' },
     { path: '/analysis', label: 'Analysis' },
     { path: '/cases', label: 'Case Studies' },
-    { path: '/download', label: 'Data & Tasks' },
+    { path: '/data', label: 'Data & Tasks' },
   ];
 
   return (

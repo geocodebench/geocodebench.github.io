@@ -19,13 +19,19 @@ const PieChart = ({ data, title }) => {
         formatter: '{b}: {c}% ({d}%)',
       },
       legend: {
-        orient: 'vertical',
-        left: 'left',
+        orient: 'horizontal',
+        left: 'center',
+        bottom: 0,
+        width: '90%',
+        align: 'auto',
+        itemGap: 12,
       },
       series: [
         {
           type: 'pie',
           radius: '60%',
+          center: ['50%', '45%'],
+          avoidLabelOverlap: true,
           data: data,
           emphasis: {
             itemStyle: {

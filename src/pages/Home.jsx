@@ -159,7 +159,7 @@ const Home = () => {
                 GitHub
               </a>
               <Link
-                to="/download"
+                to="/data"
                 className="px-8 py-4 bg-transparent text-white border-2 border-white rounded-xl font-bold text-base hover:bg-white/20 transition-all transform hover:scale-105 backdrop-blur-sm shadow-lg flex items-center justify-center gap-2"
               >
                 <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
