@@ -7,7 +7,10 @@
     <script>
       // Single Page Apps for GitHub Pages
       // https://github.com/rafgraph/spa-github-pages
-      var pathSegmentsToKeep = 1;
+      // For an org/user site like https://geocodebench.github.io
+      // keep 0 path segments; set to 1 only for project pages:
+      // https://username.github.io/repo-name
+      var pathSegmentsToKeep = 0;
       var l = window.location;
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
