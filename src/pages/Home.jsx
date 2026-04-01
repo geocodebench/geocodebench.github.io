@@ -416,8 +416,11 @@ const Home = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Citation</h2>
             <p className="text-sm text-gray-500 mb-3">If you use GeoCodeBench in your research, please cite:</p>
             <pre className="bg-gray-900 text-gray-100 p-5 rounded-xl text-sm overflow-x-auto font-mono">
-{`@article{geocodebench2026,
-  todo
+{`@article{li2026benchmarking,
+  title={Benchmarking PhD-Level Coding in 3D Geometric Computer Vision}, 
+  author={Wenyi,Li and Renkai,Luo and Yue,Yu and Huan-ang,Gao and Mingju,Gao and Li,Yuan and Chaoyou,Fu and Hao,Zhao},
+  journal={arXiv preprint arXiv:2603.30038},
+  year={2026},
 }`}
             </pre>
           </div>
