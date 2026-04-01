@@ -418,7 +418,7 @@ const Home = () => {
             <pre className="bg-gray-900 text-gray-100 p-5 rounded-xl text-sm overflow-x-auto font-mono">
 {`@article{li2026benchmarking,
   title={Benchmarking PhD-Level Coding in 3D Geometric Computer Vision}, 
-  author={Wenyi,Li and Renkai,Luo and Yue,Yu and Huan-ang,Gao and Mingju,Gao and Li,Yuan and Chaoyou,Fu and Hao,Zhao},
+  author={Wenyi, Li and Renkai, Luo and Yue, Yu and Huan-ang, Gao and Mingju, Gao and Li, Yuan and Chaoyou, Fu and Hao, Zhao},
   journal={arXiv preprint arXiv:2603.30038},
   year={2026},
 }`}
