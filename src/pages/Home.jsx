@@ -132,7 +132,7 @@ const Home = () => {
             {/* CTA Buttons: Paper, GitHub, Data, View Leaderboard */}
             <div className="flex flex-wrap justify-center gap-3">
               <a
-                href="https://arxiv.org"
+                href="https://arxiv.org/abs/2603.30038"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-transparent text-white border-2 border-white rounded-xl font-bold text-base hover:bg-white/20 transition-all transform hover:scale-105 backdrop-blur-sm shadow-lg flex items-center justify-center gap-2"

@@ -5,14 +5,14 @@
       "title": "GeoCodeBench benchmark released",
       "tag": "Release",
       "body": "We are excited to announce the release of GeoCodeBench, along with an online leaderboard.",
-      "link": "/data"
+      "link": "https://github.com/geocodebench/GeoCodeBench"
     },
     {
       "date": "2026-02-21",
       "title": "Accepted to CVPR 2026",
       "tag": "Publication",
       "body": "Our paper has been accepted to CVPR 2026.",
-      "link": "https://arxiv.org"
+      "link": "https://arxiv.org/abs/2603.30038"
     }
   ]
 }

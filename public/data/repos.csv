@@ -1,101 +1,101 @@
-repo_name,unittest_index,Source,Question Type
-01_UVGS,1,CVPR 2025,Geometric Transformations
-01_UVGS,2,CVPR 2025,Mechanics/Optics Formulation
-02_3dgut,1,CVPR 2025,Mechanics/Optics Formulation
-03_OmniSplat,1,CVPR 2025,Geometric Logic Routing
-03_OmniSplat,2,CVPR 2025,Novel Algorithm Implementation
-04_IRGS,1,CVPR 2025,Geometric Transformations
-05_splatter360,1,CVPR 2025,Novel Algorithm Implementation
-05_splatter360,2,CVPR 2025,Novel Algorithm Implementation
-05_splatter360,3,CVPR 2025,Geometric Transformations
-06_IncEventGs,1,CVPR 2025,Mechanics/Optics Formulation
-06_IncEventGs,2,CVPR 2025,Mechanics/Optics Formulation
-06_IncEventGs,3,CVPR 2025,Novel Algorithm Implementation
-07_LPM,1,CVPR 2025,Mechanics/Optics Formulation
-07_LPM,2,CVPR 2025,Mechanics/Optics Formulation
-08_DOFGS,1,CVPR 2025,Mechanics/Optics Formulation
-09_4DGS-SLAM,1,ICCV 2025,Mechanics/Optics Formulation
-09_4DGS-SLAM,2,ICCV 2025,Mechanics/Optics Formulation
-09_4DGS-SLAM,3,ICCV 2025,Mechanics/Optics Formulation
-10_CoMoGaussian,1,ICCV 2025,Novel Algorithm Implementation
-10_CoMoGaussian,2,ICCV 2025,Geometric Transformations
-10_CoMoGaussian,3,ICCV 2025,Novel Algorithm Implementation
-11_Curve-AwareGaussian,1,ICCV 2025,Mechanics/Optics Formulation
-11_Curve-AwareGaussian,2,ICCV 2025,Mechanics/Optics Formulation
-11_Curve-AwareGaussian,3,ICCV 2025,Novel Algorithm Implementation
-12_Discretized-SDF,1,ICCV 2025,Mechanics/Optics Formulation
-13_Instant-GI,1,ICCV 2025,Geometric Logic Routing
-14_DeGauss,1,ICCV 2025,Novel Algorithm Implementation
-14_DeGauss,2,ICCV 2025,Geometric Logic Routing
-15_GeoSplatting,1,ICCV 2025,Novel Algorithm Implementation
-15_GeoSplatting,2,ICCV 2025,Mechanics/Optics Formulation
-16_RegGs,1,ICCV 2025,Novel Algorithm Implementation
-16_RegGs,2,ICCV 2025,Novel Algorithm Implementation
-16_RegGs,3,ICCV 2025,Mechanics/Optics Formulation
-17_DashGaussian,1,CVPR 2025,Geometric Logic Routing
-17_DashGaussian,2,CVPR 2025,Novel Algorithm Implementation
-17_DashGaussian,3,CVPR 2025,Geometric Logic Routing
-18_guidedvd-3dgs,1,CVPR 2025,Geometric Transformations
-18_guidedvd-3dgs,2,CVPR 2025,Geometric Logic Routing
-18_guidedvd-3dgs,3,CVPR 2025,Geometric Logic Routing
-18_guidedvd-3dgs,4,CVPR 2025,Novel Algorithm Implementation
-19_Self-Cali-Gs,1,ICCV 2025,Mechanics/Optics Formulation
-19_Self-Cali-Gs,2,ICCV 2025,Geometric Logic Routing
-19_Self-Cali-Gs,3,ICCV 2025,Novel Algorithm Implementation
-19_Self-Cali-Gs,4,ICCV 2025,Geometric Logic Routing
-20_ludvig,1,ICCV 2025,Novel Algorithm Implementation
-21_PolGs,1,ICCV 2025,Mechanics/Optics Formulation
-21_PolGs,2,ICCV 2025,Geometric Transformations
-21_PolGs,3,ICCV 2025,Geometric Logic Routing
-21_PolGs,4,ICCV 2025,Novel Algorithm Implementation
-22_FlexGs,1,CVPR 2025,Novel Algorithm Implementation
-23_MonoSplat,1,CVPR 2025,Mechanics/Optics Formulation
-24_HOGS,1,CVPR 2025,Geometric Transformations
-25_Sparse2DGS,1,CVPR 2025,Geometric Transformations
-25_Sparse2DGS,2,CVPR 2025,Geometric Transformations
-25_Sparse2DGS,3,CVPR 2025,Mechanics/Optics Formulation
-26_TsSplat,1,ICLR 2025,Mechanics/Optics Formulation
-26_TsSplat,2,ICLR 2025,Geometric Transformations
-26_TsSplat,3,ICLR 2025,Mechanics/Optics Formulation
-27_Ref-Gaussian,1,ICLR 2025,Mechanics/Optics Formulation
-27_Ref-Gaussian,2,ICLR 2025,Mechanics/Optics Formulation
-27_Ref-Gaussian,3,ICLR 2025,Mechanics/Optics Formulation
-27_Ref-Gaussian,4,ICLR 2025,Mechanics/Optics Formulation
-28_FCGS,1,ICLR 2025,Novel Algorithm Implementation
-29_Surfhead,1,ICLR 2025,Mechanics/Optics Formulation
-29_Surfhead,2,ICLR 2025,Mechanics/Optics Formulation
-29_Surfhead,3,ICLR 2025,Novel Algorithm Implementation
-29_Surfhead,4,ICLR 2025,Novel Algorithm Implementation
-30_ProbPose,1,CVPR 2025,Novel Algorithm Implementation
-30_ProbPose,2,CVPR 2025,Novel Algorithm Implementation
-30_ProbPose,3,CVPR 2025,Novel Algorithm Implementation
-31_neural-radiance-caching,1,CVPR 2025,Geometric Logic Routing
-32_FluidNexus,1,CVPR 2025,Mechanics/Optics Formulation
-32_FluidNexus,2,CVPR 2025,Mechanics/Optics Formulation
-32_FluidNexus,3,CVPR 2025,Geometric Transformations
-33_threeview,1,CVPR 2025,Geometric Transformations
-34_3D-GSW,1,CVPR 2025,Novel Algorithm Implementation
-35_CRISP,1,CVPR 2025,Geometric Transformations
-35_CRISP,2,CVPR 2025,Geometric Transformations
-35_CRISP,3,CVPR 2025,Novel Algorithm Implementation
-35_CRISP,4,CVPR 2025,Novel Algorithm Implementation
-36_MadPose,1,CVPR 2025,Geometric Transformations
-36_MadPose,2,CVPR 2025,Geometric Transformations
-36_MadPose,3,CVPR 2025,Geometric Transformations
-37_Geometry-in-Style,1,CVPR 2025,Geometric Transformations
-37_Geometry-in-Style,2,CVPR 2025,Novel Algorithm Implementation
-38_Simulator-HC,1,CVPR 2025,Geometric Transformations
-39_GO-N3RDet,1,CVPR 2025,Mechanics/Optics Formulation
-40_UnMix-NeRF,1,ICCV 2025,Novel Algorithm Implementation
-41_WildGS-SLAM,1,CVPR 2025,Geometric Transformations
-41_WildGS-SLAM,2,CVPR 2025,Novel Algorithm Implementation
-42_MASt3R-SLAM,1,CVPR 2025,Geometric Transformations
-43_S4M,1,ICCV 2025,Novel Algorithm Implementation
-43_S4M,2,ICCV 2025,Novel Algorithm Implementation
-44_forecasting-rotational-dynamics,1,ICCV 2025,Geometric Transformations
-44_forecasting-rotational-dynamics,2,ICCV 2025,Geometric Transformations
-45_easy3d,1,ICCV 2025,Novel Algorithm Implementation
-46_zmsf,1,CVPR 2025,Geometric Transformations
-46_zmsf,2,CVPR 2025,Mechanics/Optics Formulation
-47_DNF,1,CVPR 2025,Novel Algorithm Implementation
-47_DNF,2,CVPR 2025,Novel Algorithm Implementation
+﻿repo_name,unittest_index,Source,Question Type,Paper link,Github link
+01_UVGS,1,CVPR 2025,Geometric Transformations,https://arxiv.org/pdf/2502.01846,https://github.com/aashishrai3799/uvgs
+01_UVGS,2,CVPR 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2502.01846,https://github.com/aashishrai3799/uvgs
+02_3dgut,1,CVPR 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2412.12507,https://github.com/nv-tlabs/3dgrut
+03_OmniSplat,1,CVPR 2025,Geometric Logic Routing,https://arxiv.org/pdf/2412.16604,https://github.com/esw0116/OmniSplat
+03_OmniSplat,2,CVPR 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2412.16604,https://github.com/esw0116/OmniSplat
+04_IRGS,1,CVPR 2025,Geometric Transformations,https://arxiv.org/pdf/2412.15867,https://github.com/fudan-zvg/IRGS
+05_splatter360,1,CVPR 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2412.06250,https://github.com/thucz/splatter360
+05_splatter360,2,CVPR 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2412.06250,https://github.com/thucz/splatter360
+05_splatter360,3,CVPR 2025,Geometric Transformations,https://arxiv.org/pdf/2412.06250,https://github.com/thucz/splatter360
+06_IncEventGs,1,CVPR 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2410.08107,https://github.com/WU-CVGL/IncEventGS
+06_IncEventGs,2,CVPR 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2410.08107,https://github.com/WU-CVGL/IncEventGS
+06_IncEventGs,3,CVPR 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2410.08107,https://github.com/WU-CVGL/IncEventGS
+07_LPM,1,CVPR 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2406.04251,https://github.com/Surrey-UP-Lab/GS-LPM
+07_LPM,2,CVPR 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2406.04251,https://github.com/Surrey-UP-Lab/GS-LPM
+08_DOFGS,1,CVPR 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2503.00746,https://github.com/leoShen917/DoF-Gaussian
+09_4DGS-SLAM,1,ICCV 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2503.16710v1,https://github.com/yanyan-li/4DGS-SLAM
+09_4DGS-SLAM,2,ICCV 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2503.16710v1,https://github.com/yanyan-li/4DGS-SLAM
+09_4DGS-SLAM,3,ICCV 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2503.16710v1,https://github.com/yanyan-li/4DGS-SLAM
+10_CoMoGaussian,1,ICCV 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2503.05332,https://github.com/Jho-Yonsei/CoMoGaussian
+10_CoMoGaussian,2,ICCV 2025,Geometric Transformations,https://arxiv.org/pdf/2503.05332,https://github.com/Jho-Yonsei/CoMoGaussian
+10_CoMoGaussian,3,ICCV 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2503.05332,https://github.com/Jho-Yonsei/CoMoGaussian
+11_Curve-AwareGaussian,1,ICCV 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2506.21401,https://github.com/zhirui-gao/Curve-Gaussian
+11_Curve-AwareGaussian,2,ICCV 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2506.21401,https://github.com/zhirui-gao/Curve-Gaussian
+11_Curve-AwareGaussian,3,ICCV 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2506.21401,https://github.com/zhirui-gao/Curve-Gaussian
+12_Discretized-SDF,1,ICCV 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2507.15629,https://github.com/NK-CS-ZZL/DiscretizedSDF
+13_Instant-GI,1,ICCV 2025,Geometric Logic Routing,https://arxiv.org/pdf/2506.23479v1,https://github.com/whoiszzj/Instant-GI
+14_DeGauss,1,ICCV 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2503.13176,https://github.com/BatFaceWayne/DeGauss
+14_DeGauss,2,ICCV 2025,Geometric Logic Routing,https://arxiv.org/pdf/2503.13176,https://github.com/BatFaceWayne/DeGauss
+15_GeoSplatting,1,ICCV 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2410.24204,https://github.com/PKU-VCL-Geometry/GeoSplatting
+15_GeoSplatting,2,ICCV 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2410.24204,https://github.com/PKU-VCL-Geometry/GeoSplatting
+16_RegGs,1,ICCV 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2507.08136,https://3dagentworld.github.io/reggs/
+16_RegGs,2,ICCV 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2507.08136,https://3dagentworld.github.io/reggs/
+16_RegGs,3,ICCV 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2507.08136,https://3dagentworld.github.io/reggs/
+17_DashGaussian,1,CVPR 2025,Geometric Logic Routing,https://arxiv.org/pdf/2503.18402,https://github.com/YouyuChen0207/DashGaussian
+17_DashGaussian,2,CVPR 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2503.18402,https://github.com/YouyuChen0207/DashGaussian
+17_DashGaussian,3,CVPR 2025,Geometric Logic Routing,https://arxiv.org/pdf/2503.18402,https://github.com/YouyuChen0207/DashGaussian
+18_guidedvd-3dgs,1,CVPR 2025,Geometric Transformations,https://arxiv.org/pdf/2503.05082,https://github.com/zhongyingji/guidedvd-3dgs
+18_guidedvd-3dgs,2,CVPR 2025,Geometric Logic Routing,https://arxiv.org/pdf/2503.05082,https://github.com/zhongyingji/guidedvd-3dgs
+18_guidedvd-3dgs,3,CVPR 2025,Geometric Logic Routing,https://arxiv.org/pdf/2503.05082,https://github.com/zhongyingji/guidedvd-3dgs
+18_guidedvd-3dgs,4,CVPR 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2503.05082,https://github.com/zhongyingji/guidedvd-3dgs
+19_Self-Cali-Gs,1,ICCV 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2502.09563,https://github.com/denghilbert/Self-Cali-GS
+19_Self-Cali-Gs,2,ICCV 2025,Geometric Logic Routing,https://arxiv.org/pdf/2502.09563,https://github.com/denghilbert/Self-Cali-GS
+19_Self-Cali-Gs,3,ICCV 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2502.09563,https://github.com/denghilbert/Self-Cali-GS
+19_Self-Cali-Gs,4,ICCV 2025,Geometric Logic Routing,https://arxiv.org/pdf/2502.09563,https://github.com/denghilbert/Self-Cali-GS
+20_ludvig,1,ICCV 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2410.14462,https://github.com/naver/ludvig
+21_PolGs,1,ICCV 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2509.19726,https://github.com/PRIS-CV/PolGS
+21_PolGs,2,ICCV 2025,Geometric Transformations,https://arxiv.org/pdf/2509.19726,https://github.com/PRIS-CV/PolGS
+21_PolGs,3,ICCV 2025,Geometric Logic Routing,https://arxiv.org/pdf/2509.19726,https://github.com/PRIS-CV/PolGS
+21_PolGs,4,ICCV 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2509.19726,https://github.com/PRIS-CV/PolGS
+22_FlexGs,1,CVPR 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2506.04174,https://github.com/LiuHengyu321/FlexGS
+23_MonoSplat,1,CVPR 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2505.15185,https://github.com/CUHK-AIM-Group/MonoSplat
+24_HOGS,1,CVPR 2025,Geometric Transformations,https://arxiv.org/pdf/2503.19232,https://github.com/huntorochi/HoGS
+25_Sparse2DGS,1,CVPR 2025,Geometric Transformations,https://arxiv.org/pdf/2504.20378,https://github.com/Wuuu3511/Sparse2DGS
+25_Sparse2DGS,2,CVPR 2025,Geometric Transformations,https://arxiv.org/pdf/2504.20378,https://github.com/Wuuu3511/Sparse2DGS
+25_Sparse2DGS,3,CVPR 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2504.20378,https://github.com/Wuuu3511/Sparse2DGS
+26_TsSplat,1,ICLR 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2405.20283v4,https://github.com/gmh14/tssplat
+26_TsSplat,2,ICLR 2025,Geometric Transformations,https://arxiv.org/pdf/2405.20283v4,https://github.com/gmh14/tssplat
+26_TsSplat,3,ICLR 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2405.20283v4,https://github.com/gmh14/tssplat
+27_Ref-Gaussian,1,ICLR 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2412.19282,https://github.com/fudan-zvg/ref-gaussian
+27_Ref-Gaussian,2,ICLR 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2412.19282,https://github.com/fudan-zvg/ref-gaussian
+27_Ref-Gaussian,3,ICLR 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2412.19282,https://github.com/fudan-zvg/ref-gaussian
+27_Ref-Gaussian,4,ICLR 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2412.19282,https://github.com/fudan-zvg/ref-gaussian
+28_FCGS,1,ICLR 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2410.08017,https://github.com/YihangChen-ee/FCGS
+29_Surfhead,1,ICLR 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2410.11682,https://github.com/summertight/surfhead_repo
+29_Surfhead,2,ICLR 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2410.11682,https://github.com/summertight/surfhead_repo
+29_Surfhead,3,ICLR 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2410.11682,https://github.com/summertight/surfhead_repo
+29_Surfhead,4,ICLR 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2410.11682,https://github.com/summertight/surfhead_repo
+30_ProbPose,1,CVPR 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2412.02254,https://github.com/MiraPurkrabek/ProbPose_code
+30_ProbPose,2,CVPR 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2412.02254,https://github.com/MiraPurkrabek/ProbPose_code
+30_ProbPose,3,CVPR 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2412.02254,https://github.com/MiraPurkrabek/ProbPose_code
+31_neural-radiance-caching,1,CVPR 2025,Geometric Logic Routing,https://arxiv.org/abs/2506.05347,https://github.com/benattal/neural-radiance-caching/tree/main?tab=readme-ov-file
+32_FluidNexus,1,CVPR 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2503.04720,https://github.com/ueoo/FluidNexus
+32_FluidNexus,2,CVPR 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2503.04720,https://github.com/ueoo/FluidNexus
+32_FluidNexus,3,CVPR 2025,Geometric Transformations,https://arxiv.org/pdf/2503.04720,https://github.com/ueoo/FluidNexus
+33_threeview,1,CVPR 2025,Geometric Transformations,https://arxiv.org/pdf/2303.16078,https://github.com/kocurvik/threeview/tree/main
+34_3D-GSW,1,CVPR 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2409.13222,https://github.com/kuai-lab/cvpr25_3D-GSW
+35_CRISP,1,CVPR 2025,Geometric Transformations,https://arxiv.org/pdf/2412.01052,https://github.com/MIT-SPARK/CRISP
+35_CRISP,2,CVPR 2025,Geometric Transformations,https://arxiv.org/pdf/2412.01052,https://github.com/MIT-SPARK/CRISP
+35_CRISP,3,CVPR 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2412.01052,https://github.com/MIT-SPARK/CRISP
+35_CRISP,4,CVPR 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2412.01052,https://github.com/MIT-SPARK/CRISP
+36_MadPose,1,CVPR 2025,Geometric Transformations,https://arxiv.org/pdf/2501.05446v1,https://github.com/MarkYu98/madpose
+36_MadPose,2,CVPR 2025,Geometric Transformations,https://arxiv.org/pdf/2501.05446v1,https://github.com/MarkYu98/madpose
+36_MadPose,3,CVPR 2025,Geometric Transformations,https://arxiv.org/pdf/2501.05446v1,https://github.com/MarkYu98/madpose
+37_Geometry-in-Style,1,CVPR 2025,Geometric Transformations,https://arxiv.org/pdf/2503.23241,https://github.com/threedle/geometry-in-style/
+37_Geometry-in-Style,2,CVPR 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2503.23241,https://github.com/threedle/geometry-in-style/
+38_Simulator-HC,1,CVPR 2025,Geometric Transformations,https://arxiv.org/pdf/2411.03745,https://github.com/XinnnyueZhang/simulatorHC/tree/main
+39_GO-N3RDet,1,CVPR 2025,Mechanics/Optics Formulation,https://arxiv.org/pdf/2503.15211,https://github.com/ZechuanLi/GO-N3RDet
+40_UnMix-NeRF,1,ICCV 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2506.21884,https://github.com/Factral/UnMix-NeRF
+41_WildGS-SLAM,1,CVPR 2025,Geometric Transformations,https://arxiv.org/pdf/2504.03886,https://github.com/GradientSpaces/WildGS-SLAM
+41_WildGS-SLAM,2,CVPR 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2504.03886,https://github.com/GradientSpaces/WildGS-SLAM
+42_MASt3R-SLAM,1,CVPR 2025,Geometric Transformations,https://arxiv.org/pdf/2412.12392,https://github.com/rmurai0610/MASt3R-SLAM
+43_S4M,1,ICCV 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2504.05301,https://github.com/cvlab-kaist/S4M/tree/main
+43_S4M,2,ICCV 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2504.05301,https://github.com/cvlab-kaist/S4M/tree/main
+44_forecasting-rotational-dynamics,1,ICCV 2025,Geometric Transformations,https://arxiv.org/pdf/2508.07775v1,https://github.com/bastianlb/forecasting-rotational-dynamics
+44_forecasting-rotational-dynamics,2,ICCV 2025,Geometric Transformations,https://arxiv.org/pdf/2508.07775v1,https://github.com/bastianlb/forecasting-rotational-dynamics
+45_easy3d,1,ICCV 2025,Novel Algorithm Implementation,https://arxiv.org/pdf/2504.11024,https://github.com/facebookresearch/easy3d/tree/main
+46_zmsf,1,CVPR 2025,Geometric Transformations,https://arxiv.org/abs/2501.10357,https://github.com/NVlabs/zero-msf/tree/main
+46_zmsf,2,CVPR 2025,Mechanics/Optics Formulation,https://arxiv.org/abs/2501.10357,https://github.com/NVlabs/zero-msf/tree/main
+47_DNF,1,CVPR 2025,Novel Algorithm Implementation,https://arxiv.org/abs/2412.05161,https://github.com/xzhang-t/DNF/tree/main
+47_DNF,2,CVPR 2025,Novel Algorithm Implementation,https://arxiv.org/abs/2412.05161,https://github.com/xzhang-t/DNF/tree/main
