@@ -124,7 +124,7 @@ const Data = () => {
           <div className="text-sm text-gray-600">Total Tasks</div>
         </div>
         <div className="bg-white rounded-lg shadow-md p-6 text-center">
-          <div className="text-4xl font-bold text-primary mb-2">33</div>
+          <div className="text-4xl font-bold text-primary mb-2">47</div>
           <div className="text-sm text-gray-600">Source Papers</div>
         </div>
         <div className="bg-white rounded-lg shadow-md p-6 text-center">
