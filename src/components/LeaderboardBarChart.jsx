@@ -113,7 +113,11 @@ const LeaderboardBarChart = ({ data, dimension, onModelClick }) => {
 
   return (
     <div className="w-full">
-      <div ref={chartRef} className="w-full h-[420px]" />
+      <div
+        ref={chartRef}
+        className="w-full"
+        style={{ height: `${Math.max(420, data.length * 40)}px` }}
+      />
     </div>
   );
 };

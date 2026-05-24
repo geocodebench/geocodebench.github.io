@@ -9,6 +9,13 @@ const RadarChart = ({ models }) => {
 
     const chart = echarts.init(chartRef.current);
 
+    const axisMax = Math.ceil(
+      Math.max(
+        50,
+        ...models.flatMap((m) => [m.geo_trans, m.mech_opt, m.algorithm, m.routing]),
+      ) / 5,
+    ) * 5;
+
     const option = {
       title: {
         text: 'Model Capability Comparison',
@@ -45,10 +52,10 @@ const RadarChart = ({ models }) => {
           padding: [2, 6],
         },
         indicator: [
-          { name: 'Geometric\nTransformations', max: 50 },
-          { name: 'Mechanics/\nOptics', max: 50 },
-          { name: 'Novel\nAlgorithm', max: 50 },
-          { name: 'Geometric\nRouting', max: 50 },
+          { name: 'Geometric\nTransformations', max: axisMax },
+          { name: 'Mechanics/\nOptics', max: axisMax },
+          { name: 'Novel\nAlgorithm', max: axisMax },
+          { name: 'Geometric\nRouting', max: axisMax },
         ],
       },
       series: [

@@ -8,6 +8,7 @@ const Home = () => {
   const [leaderboardData, setLeaderboardData] = useState(null);
   const [currentFinding, setCurrentFinding] = useState(0);
   const [news, setNews] = useState(null);
+  const [newsExpanded, setNewsExpanded] = useState(false);
 
   useEffect(() => {
     fetch(`${import.meta.env.BASE_URL}data/statistics.json`)
@@ -205,58 +206,129 @@ const Home = () => {
       {/* Main Content - no negative margin so hero does not cover this block */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12">
         {/* News */}
-        {news?.items?.length > 0 && (
-          <div className="bg-white rounded-2xl shadow-lg p-6 mb-10 border border-gray-100">
-            <div className="flex items-center mb-4">
-              <div className="p-2 bg-gradient-to-br from-rose-500 to-fuchsia-600 rounded-lg mr-3 shadow-md">
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8.25v4.5l3 1.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+        {news?.items?.length > 0 && (() => {
+          const sortedNews = [...news.items].sort((a, b) =>
+            String(b.date).localeCompare(String(a.date))
+          );
+          const latestNews = sortedNews[0];
+          const olderNews = sortedNews.slice(1);
+
+          const renderNewsItem = (item, idx, { compact = false } = {}) => (
+            <div key={`${item.date}-${idx}`} className="flex gap-3">
+              <div className="flex flex-col items-center">
+                <div
+                  className={`rounded-full bg-gradient-to-r from-rose-500 to-fuchsia-600 ${
+                    compact ? 'h-2 w-2 mt-2' : 'h-3 w-3 mt-2'
+                  }`}
+                />
+                {!compact && <div className="w-px flex-1 bg-gray-200 min-h-[1rem]" />}
               </div>
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900">News</h2>
+              <div className="flex-1 min-w-0">
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                  <div
+                    className={`font-semibold text-gray-900 ${
+                      compact ? 'text-sm' : 'text-base md:text-lg'
+                    }`}
+                  >
+                    {item.title}
+                  </div>
+                  {item.tag && (
+                    <span
+                      className={`rounded-full font-semibold bg-rose-50 text-rose-700 border border-rose-100 ${
+                        compact ? 'px-2 py-0.5 text-[11px]' : 'px-2.5 py-0.5 text-xs'
+                      }`}
+                    >
+                      {item.tag}
+                    </span>
+                  )}
+                  <div className={`text-gray-500 ${compact ? 'text-[11px]' : 'text-xs'}`}>
+                    {item.date}
+                  </div>
+                </div>
+                {item.body && (
+                  <p
+                    className={`text-gray-600 mt-1 leading-relaxed ${
+                      compact ? 'text-xs' : 'text-sm'
+                    }`}
+                  >
+                    {item.body}
+                  </p>
+                )}
+                {item.link && (
+                  <div className="mt-1.5">
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`font-semibold text-blue-700 hover:text-blue-800 ${
+                        compact ? 'text-xs' : 'text-sm'
+                      }`}
+                    >
+                      Learn more →
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
+          );
 
-            <div className="space-y-3">
-              {[...news.items]
-                .sort((a, b) => String(b.date).localeCompare(String(a.date)))
-                .slice(0, 4)
-                .map((item, idx) => (
-                  <div key={`${item.date}-${idx}`} className="flex gap-3">
-                    <div className="flex flex-col items-center">
-                      <div className="h-2.5 w-2.5 rounded-full bg-gradient-to-r from-rose-500 to-fuchsia-600 mt-1.5" />
-                      <div className="w-px flex-1 bg-gray-200" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                        <div className="text-sm font-semibold text-gray-900">{item.title}</div>
-                        {item.tag && (
-                          <span className="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-rose-50 text-rose-700 border border-rose-100">
-                            {item.tag}
-                          </span>
-                        )}
-                        <div className="text-[11px] text-gray-500">{item.date}</div>
-                      </div>
-                      {item.body && <p className="text-xs text-gray-600 mt-1 leading-relaxed">{item.body}</p>}
-                      {item.link && (
-                        <div className="mt-1.5">
-                          <a
-                            href={item.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-xs font-semibold text-blue-700 hover:text-blue-800"
-                          >
-                            Learn more →
-                          </a>
-                        </div>
-                      )}
+          return (
+            <div className="bg-white rounded-2xl shadow-lg p-6 mb-10 border border-gray-100">
+              <div className="flex items-center mb-4">
+                <div className="p-2 bg-gradient-to-br from-rose-500 to-fuchsia-600 rounded-lg mr-3 shadow-md">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8.25v4.5l3 1.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-900">News</h2>
+                </div>
+              </div>
+
+              <div className="rounded-xl border border-rose-100 bg-gradient-to-br from-rose-50/80 to-fuchsia-50/50 p-4 md:p-5">
+                {renderNewsItem(latestNews, 0)}
+              </div>
+
+              {olderNews.length > 0 && (
+                <div className="mt-3">
+                  <button
+                    type="button"
+                    onClick={() => setNewsExpanded((prev) => !prev)}
+                    className="flex w-full items-center justify-between gap-2 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 transition-colors"
+                    aria-expanded={newsExpanded}
+                  >
+                    <span>
+                      {newsExpanded
+                        ? 'Hide earlier updates'
+                        : `Show ${olderNews.length} earlier update${olderNews.length > 1 ? 's' : ''}`}
+                    </span>
+                    <svg
+                      className={`w-4 h-4 flex-shrink-0 text-gray-400 transition-transform duration-200 ${
+                        newsExpanded ? 'rotate-180' : ''
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                      newsExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+                  >
+                    <div className="space-y-3 pt-2 border-t border-gray-100">
+                      {olderNews.map((item, idx) => renderNewsItem(item, idx + 1, { compact: true }))}
                     </div>
                   </div>
-                ))}
+                </div>
+              )}
             </div>
-          </div>
-        )}
+          );
+        })()}
 
         {/* Benchmark Results - bar chart */}
         {leaderboardData?.leaderboard && (
@@ -270,7 +342,15 @@ const Home = () => {
                 </div>
                 <div>
                   <h2 className="text-3xl font-bold text-gray-900">Benchmark Results</h2>
-                  <p className="text-sm text-gray-500 mt-1">Overall pass rate by model</p>
+                  <p className="text-sm text-gray-500 mt-1">
+                    Overall pass rate by model
+                    {leaderboardData.leaderboard.length > 0 && (
+                      <span className="text-gray-400">
+                        {' '}
+                        · {leaderboardData.leaderboard.length} models
+                      </span>
+                    )}
+                  </p>
                 </div>
               </div>
               <Link
@@ -293,7 +373,12 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
               { title: 'Total Tasks', value: stats.total_tasks, icon: '📝', color: gradientColors[0] },
-              { title: 'Models Evaluated', value: stats.total_models, icon: '🤖', color: gradientColors[1] },
+              {
+                title: 'Models Evaluated',
+                value: leaderboardData?.leaderboard?.length ?? stats.total_models,
+                icon: '🤖',
+                color: gradientColors[1],
+              },
               { title: 'Conference Sources', value: stats.sources.length, icon: '📚', color: gradientColors[2] },
               { title: 'Avg Paper Length', value: `${(stats.avg_paper_tokens / 1000).toFixed(1)}K`, icon: '📄', color: gradientColors[3] },
             ].map((stat, idx) => (

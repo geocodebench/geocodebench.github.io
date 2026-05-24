@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "date": "2026-05-24",
+      "title": "New frontier models evaluated",
+      "tag": "Leaderboard",
+      "body": "We evaluated Claude Opus 4.7, Gemini 3.1 Pro, and GPT-5.5 on GeoCodeBench. Results are now on the leaderboard."
+    },
+    {
       "date": "2026-03-31",
       "title": "GeoCodeBench benchmark released",
       "tag": "Release",

@@ -1,6 +1,6 @@
 {
   "total_tasks": 100,
-  "total_models": 8,
+  "total_models": 11,
   "avg_paper_tokens": 20232,
   "sources": [
     {"venue": "CVPR'25", "count": 28},
@@ -14,7 +14,7 @@
     {"category": "Geometric Logic Routing", "percentage": 11}
   ],
   "key_findings": [
-    "GPT-5 leads with 36.6% pass rate",
+    "Claude Opus 4.7 leads with 49.4% pass rate",
     "LLMs can achieve Creative Correctness in 3D geometry tasks",
     "LLMs show stronger general 3D understanding than research capability",
     "Method section context outperforms Full Paper input"

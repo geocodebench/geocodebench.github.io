@@ -12,8 +12,8 @@ const Leaderboard = () => {
       .then(res => res.json())
       .then(data => {
         setData(data);
-        // Select top 3 models by default for radar chart
-        setSelectedModels(data.leaderboard.slice(0, 3));
+        const topByOverall = [...data.leaderboard].sort((a, b) => b.overall - a.overall);
+        setSelectedModels(topByOverall.slice(0, 3));
       })
       .catch(err => console.error('Error loading leaderboard:', err));
   }, []);

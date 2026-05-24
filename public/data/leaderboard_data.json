@@ -3,6 +3,36 @@
     "metric": "Pass Rate (%)",
     "leaderboard": [
       {
+        "model": "Claude-Opus-4.7",
+        "company": "Anthropic",
+        "type": "closed-source",
+        "overall": 49.4,
+        "geo_trans": 67.6,
+        "mech_opt": 46.3,
+        "algorithm": 40.1,
+        "routing": 47.3
+      },
+      {
+        "model": "Gemini-3.1-Pro",
+        "company": "Google",
+        "type": "closed-source",
+        "overall": 49.1,
+        "geo_trans": 62.6,
+        "mech_opt": 54.8,
+        "algorithm": 34.3,
+        "routing": 49.1
+      },
+      {
+        "model": "GPT-5.5",
+        "company": "OpenAI",
+        "type": "closed-source",
+        "overall": 46.6,
+        "geo_trans": 65.2,
+        "mech_opt": 42.3,
+        "algorithm": 41.7,
+        "routing": 33.2
+      },
+      {
         "model": "GPT-5",
         "company": "OpenAI",
         "type": "closed-source",
