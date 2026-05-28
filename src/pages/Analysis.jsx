@@ -1,7 +1,40 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import ScatterPlot from '../components/ScatterPlot';
 import PieChart from '../components/PieChart';
 import BarChart from '../components/BarChart';
+
+const TASK_COUNTS = {
+  geo_trans: 24,
+  mech_opt: 31,
+  algorithm: 34,
+  routing: 11,
+};
+
+const pct = (value) => `${Number(value).toFixed(1)}%`;
+
+const buildOverallModelComparison = (leaderboard) =>
+  [...leaderboard]
+    .sort((a, b) => b.overall - a.overall)
+    .map((model) => {
+      const general =
+        (TASK_COUNTS.geo_trans * model.geo_trans + TASK_COUNTS.mech_opt * model.mech_opt) /
+        (TASK_COUNTS.geo_trans + TASK_COUNTS.mech_opt);
+      const research =
+        (TASK_COUNTS.algorithm * model.algorithm + TASK_COUNTS.routing * model.routing) /
+        (TASK_COUNTS.algorithm + TASK_COUNTS.routing);
+
+      return {
+        model: model.model,
+        company: model.company,
+        overall: pct(model.overall),
+        general: pct(general),
+        research: pct(research),
+        geoTrans: pct(model.geo_trans),
+        mechOpt: pct(model.mech_opt),
+        algorithm: pct(model.algorithm),
+        routing: pct(model.routing),
+      };
+    });
 
 const Analysis = () => {
   const [data, setData] = useState(null);
@@ -26,96 +59,10 @@ const Analysis = () => {
     { model: 'Qwen3-Coder-480B', shape: 18, syntax: 9, import: 5, type: 27, functional: 41 },
   ];
 
-  const overallModelComparison = [
-    {
-      model: 'GPT-5',
-      company: 'OpenAI',
-      overall: '36.6%',
-      general: '42.8%',
-      research: '29.1%',
-      geoTrans: '41.7%',
-      mechOpt: '43.7%',
-      algorithm: '29.1%',
-      routing: '28.9%',
-    },
-    {
-      model: 'Claude-Sonnet-4.5',
-      company: 'Anthropic',
-      overall: '31.1%',
-      general: '37.2%',
-      research: '23.7%',
-      geoTrans: '38.3%',
-      mechOpt: '36.5%',
-      algorithm: '19.7%',
-      routing: '35.9%',
-    },
-    {
-      model: 'Gemini-2.5-Pro',
-      company: 'Google',
-      overall: '30.4%',
-      general: '33.8%',
-      research: '26.2%',
-      geoTrans: '41.9%',
-      mechOpt: '27.6%',
-      algorithm: '25.3%',
-      routing: '29.1%',
-    },
-    {
-      model: 'Kimi-K2-Instruct',
-      company: 'Moonshot',
-      overall: '30.4%',
-      general: '34.6%',
-      research: '25.1%',
-      geoTrans: '36.7%',
-      mechOpt: '33.1%',
-      algorithm: '23.1%',
-      routing: '31.4%',
-    },
-    {
-      model: 'Doubao-Seed-1.6',
-      company: 'ByteDance',
-      overall: '26.9%',
-      general: '29.7%',
-      research: '23.4%',
-      geoTrans: '40.9%',
-      mechOpt: '21.0%',
-      algorithm: '22.9%',
-      routing: '25.2%',
-    },
-    {
-      model: 'Qwen3-Coder-480B',
-      company: 'Alibaba',
-      overall: '23.5%',
-      general: '22.7%',
-      research: '24.6%',
-      geoTrans: '29.0%',
-      mechOpt: '17.7%',
-      algorithm: '21.8%',
-      routing: '33.2%',
-    },
-    {
-      model: 'DeepSeek-R1',
-      company: 'DeepSeek',
-      overall: '21.0%',
-      general: '27.2%',
-      research: '13.5%',
-      geoTrans: '33.9%',
-      mechOpt: '21.9%',
-      algorithm: '12.4%',
-      routing: '17.0%',
-    },
-    {
-      model: 'Llama-3.1-405B-Instruct',
-      company: 'Meta',
-      overall: '14.3%',
-      general: '16.8%',
-      research: '11.3%',
-      geoTrans: '21.3%',
-      mechOpt: '13.2%',
-      algorithm: '10.9%',
-      routing: '12.7%',
-    },
-  ];
+  const overallModelComparison = useMemo(
+    () => (data?.leaderboard ? buildOverallModelComparison(data.leaderboard) : []),
+    [data],
+  );
 
   // Impact of paper length (relative to baseline: w/o paper input)
   // Source: paperlength.csv

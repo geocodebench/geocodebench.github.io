@@ -9,13 +9,18 @@ const DIMENSION_LABELS = {
   routing: 'Geometric Routing',
 };
 
+const getChartInitOptions = () => ({
+  renderer: 'svg',
+  devicePixelRatio: Math.min(Math.max(window.devicePixelRatio || 1, 2), 3),
+});
+
 const LeaderboardBarChart = ({ data, dimension, onModelClick }) => {
   const chartRef = useRef(null);
 
   useEffect(() => {
     if (!chartRef.current || !data?.length) return;
 
-    const chart = echarts.init(chartRef.current);
+    const chart = echarts.init(chartRef.current, null, getChartInitOptions());
 
     // Sort by selected dimension descending (rank order)
     const sorted = [...data].sort((a, b) => (b[dimension] ?? 0) - (a[dimension] ?? 0));
@@ -23,6 +28,10 @@ const LeaderboardBarChart = ({ data, dimension, onModelClick }) => {
     const values = sorted.map((m) => Number((m[dimension] ?? 0).toFixed(1)));
 
     const option = {
+      textStyle: {
+        fontFamily:
+          'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+      },
       tooltip: {
         trigger: 'axis',
         axisPointer: { type: 'shadow' },
@@ -45,14 +54,16 @@ const LeaderboardBarChart = ({ data, dimension, onModelClick }) => {
         name: 'Pass Rate (%)',
         min: 0,
         max: 100,
-        axisLabel: { formatter: '{value}%' },
+        axisLabel: { formatter: '{value}%', fontSize: 13 },
+        nameTextStyle: { fontSize: 13 },
         splitLine: { lineStyle: { type: 'dashed', opacity: 0.4 } },
       },
       yAxis: {
         type: 'category',
         data: models,
         axisLabel: {
-          width: 160,
+          width: 180,
+          fontSize: 13,
           overflow: 'truncate',
           ellipsis: '...',
         },
@@ -84,6 +95,7 @@ const LeaderboardBarChart = ({ data, dimension, onModelClick }) => {
             show: true,
             position: 'right',
             formatter: '{c}%',
+            fontSize: 13,
             fontWeight: 600,
             color: '#374151',
           },
@@ -92,6 +104,7 @@ const LeaderboardBarChart = ({ data, dimension, onModelClick }) => {
     };
 
     chart.setOption(option);
+    requestAnimationFrame(() => chart.resize());
 
     if (onModelClick) {
       chart.off('click');
